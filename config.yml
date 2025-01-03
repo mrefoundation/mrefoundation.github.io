@@ -53,14 +53,7 @@ params:
     profileMode:
           enabled: true
           title: Mathematical Research-Education Foundation
-          subtitle: "We do mathematical research on these topics:
-
-    Numerical Methods
-    Nonlinear PDE
-    Mathematical Modelling
-    Statistical Learning
-
-We also aim to give free mathematics online tutoring to many underprivileged students (Indonesia)."
+          subtitle: "We do mathematical research on Numerical Methods, Nonlinear PDE, Mathematical Modelling, and Statistical Learning. We also aim to give free mathematics online tutoring to many underprivileged students (Indonesia)."
           imageUrl: "picture.jpeg"
           imageWidth: 160
           imageHeight: 160
