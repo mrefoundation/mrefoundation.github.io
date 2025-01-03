@@ -51,13 +51,6 @@
       <description>This paper studies the pulmonary efficiency of sausage dogs. Published in the Journal of Canine Science, 2004.</description>
     </item>
     <item>
-      <title>Lectures at the Villa of Reduced Circumstances</title>
-      <link>https://mrefoundation.github.io/courses/course1/</link>
-      <pubDate>Mon, 10 Mar 2003 00:00:00 +0000</pubDate>
-      <guid>https://mrefoundation.github.io/courses/course1/</guid>
-      <description>This graduate course presents classical results in Romance philology.</description>
-    </item>
-    <item>
       <title>Portugese Irregular Verbs</title>
       <link>https://mrefoundation.github.io/books/book1/</link>
       <pubDate>Wed, 01 Jan 1997 00:00:00 +0000</pubDate>
@@ -65,11 +58,11 @@
       <description>This book discusses Portugese irregular verbs in great details.</description>
     </item>
     <item>
-      <title>Profanity in Early Irish</title>
-      <link>https://mrefoundation.github.io/courses/course2/</link>
-      <pubDate>Sat, 16 Jun 1990 00:00:00 +0000</pubDate>
-      <guid>https://mrefoundation.github.io/courses/course2/</guid>
-      <description>This undergraduate course discusses profanity in Early Irish.</description>
+      <title>Courses</title>
+      <link>https://mrefoundation.github.io/courses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mrefoundation.github.io/courses/</guid>
+      <description>Courses on philology by Professor Dr von Igelfeld and esteemed colleagues. For undergraduate and graduate students.</description>
     </item>
   </channel>
 </rss>
