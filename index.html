@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Education Portal</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background-color: white;
       font-family: Arial, sans-serif;
+      height: 100vh;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      padding: 40px;
+    }
+
+    .description {
+      flex: 1;
+      max-width: 400px;
+      padding-right: 40px;
+      color: #333;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     h1 {
-      color: #333;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
 
     .button {
@@ -36,11 +54,31 @@
     .button:hover {
       background-color: #e0e0e0;
     }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .description {
+        padding-right: 0;
+        margin-bottom: 30px;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Welcome</h1>
-  <a href="#tutoring" class="button">Tutoring Programs</a>
-  <a href="#classes" class="button">Classes</a>
+  <div class="description">
+    <h1>Welcome to Our Learning Platform</h1>
+    <p>
+      Explore our personalized tutoring programs and structured classes. Whether you're seeking help with specific subjects or looking for guided instruction, we’ve got you covered.
+    </p>
+  </div>
+
+  <div class="main-content">
+    <a href="#tutoring" class="button">Tutoring Programs</a>
+    <a href="#classes" class="button">Classes</a>
+  </div>
 </body>
 </html>
