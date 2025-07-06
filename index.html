@@ -2,84 +2,219 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Education Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patchwork of Progress</title>
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
+    html, body {
       margin: 0;
-      background-color: white;
-      font-family: Arial, sans-serif;
-      height: 100vh;
+      padding: 0;
+      font-family: 'Domine', Georgia, serif;
+      background: #ffde21;
+      color: black;
+      height: 100%;
+    }
+
+    /* HEADER BAR */
+    .page-header {
       display: flex;
-      flex-direction: row;
-      justify-content: center;
       align-items: center;
-      padding: 40px;
+      padding: 20px 40px;
+      background-color: rgba(220,220,220,1);
+      position: absolute;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      z-index: 10;
     }
 
-    .description {
-      flex: 1;
-      max-width: 400px;
-      padding-right: 40px;
-      color: #333;
-    }
-
-    .main-content {
-      flex: 1;
+    .header-left {
       display: flex;
-      flex-direction: column;
       align-items: center;
+      gap: 20px;
     }
 
-    h1 {
-      margin-bottom: 20px;
-    }
-
-    .button {
-      background-color: #f0f0f0;
-      border: 1px solid #ccc;
-      color: #333;
-      padding: 15px 30px;
-      margin: 10px;
-      border-radius: 6px;
+    .page-title a {
+      font-size: 24px;
+      font-weight: bold;
+      color: black;
       text-decoration: none;
+    }
+
+    
+    .nav-menu {
+      display: flex;
+      gap: 24px;
+      margin-left: 40px;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: black;
       font-size: 16px;
-      transition: background-color 0.3s ease;
+      transition: color 0.2s ease;
     }
 
-    .button:hover {
-      background-color: #e0e0e0;
+    .nav-menu a:hover {
+      color: #555;
     }
 
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-        text-align: center;
-      }
 
-      .description {
-        padding-right: 0;
-        margin-bottom: 30px;
-      }
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      min-height: 100vh;
+    }
+
+    .hero-content {
+      position: relative;
+      padding: 10px;
+      border-radius: 0px;
+      background-image: url('sample7.gif'); /* 🔄 Replace with your image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 1400px;
+      width: 100%;
+      color: white;
+      overflow: hidden;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .hero-content2 {
+      position: relative;
+      padding: 10px;
+      border-radius: 0px;
+      background-image: url('wave_gif.gif'); /* 🔄 Replace with your image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 1400px;
+      width: 100%;
+      color: white;
+      overflow: hidden;
+       margin-top: 0;
+       padding-top: 0;
+    }
+
+
+    /* Veneer overlay */
+    .hero-content::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.8); /* ✅ Dark veneer */
+      z-index: 0;
+    }
+
+    /* Keep text above the overlay */
+    .hero-content > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Veneer overlay */
+    .hero-content2::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.7); /* ✅ Dark veneer */
+      z-index: 0;
+    }
+
+    /* Keep text above the overlay */
+    .hero-content2 > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-title {
+      font-size: 42px;
+      margin-bottom: 16px;
+    }
+
+    .hero-desc {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .hero-title2 {
+      font-size: 42px;
+      margin-bottom: 16px;
+      color: white;
+    }
+
+    .hero-desc2 {
+      font-size: 18px;
+      line-height: 1.6;
+      color: white;
+    }
+
+    .logo-img {
+  height: 60px; /* adjust as needed */
+  width: auto;
+  display: block;
     }
   </style>
 </head>
 <body>
-  <div class="description">
-    <h1>Welcome to Our Learning Platform</h1>
-    <p>
-      Explore our personalized tutoring programs and structured classes. Whether you're seeking help with specific subjects or looking for guided instruction, we’ve got you covered.
-    </p>
+
+  <!-- Header with logo and horizontal menu -->
+  <div class="page-header">
+    <div class="header-left">
+      <a href="index.html">
+        <img src="logo2_trans.png" alt="MREF Logo" class="logo-img">
+      </a>
+    </div>
+    <nav class="nav-menu">
+      <a href="math_sessions.html">Online Math Sessions</a>
+      <a href="research.html">Our Research</a>
+      <a href="researchers.html">Tutors and Researchers</a>
+    </nav>
   </div>
 
-  <div class="main-content">
-    <a href="#tutoring" class="button">Tutoring Programs</a>
-    <a href="#classes" class="button">Classes</a>
-    <a href="research.html" class="button">Our Research</a>
-  </div>
+  <!-- Centered hero block -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2 class="hero-title">Mathematics Research and Education Foundation</h2>
+      <p class="hero-desc">
+        MREF is a private organization in Indonesia that aims to produce both mathematical research and educational services. 
+
+<br> <br>
+<u> Online Tutoring Sessions: </u> <br>
+We provide online tutoring sessions and more. Mathematics is a language. Like learning any language, at first it feels unnatural, but as we make it a habit it will become visceral. Therefore, we encourage students to not only attend classes, but to work on many problems, beginning from the simplest ones to the intricate ones. Every student can be fluent in math by first strengthening the basics and fundamentals before gradually mastering further topics. 
+      </p>
+    </div>
+ 
+    <div class="hero-content2">
+      <h2 class="hero-title2">Research Scope</h2>
+      <p class="hero-desc2">
+	Mathematical modelling, infectious disease modelling, numerical solution of PDE, Fourier spectral method, and neural network. 
+      </p>
+    </div>
+  </section>
+
+<footer style="
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  color: #555;
+  margin-top: 40px;
+">
+  Contact us: 
+  <a href="https://wa.me/628170474447" target="_blank" style="color: #333; text-decoration: none;">
+    WhatsApp +62 817 047 4447
+  </a> | 
+  <a href="mailto:mref.indonesia@gmail.com" style="color: #333; text-decoration: none;">
+    mref.indonesia@gmail.com
+  </a>
+</footer>
 </body>
 </html>

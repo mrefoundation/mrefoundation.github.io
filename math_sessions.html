@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scheduled Sessions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Domine', serif;
+      background-color: #ffffff;
+      color: #222;
+    }
+
+    /* Header */
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 24px;
+      margin-left: 40px;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+      transition: color 0.2s ease;
+    }
+
+    .nav-menu a:hover {
+      color: #555;
+    }
+
+    /* Sessions Section */
+    .sessions {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+      margin-bottom: 20px;
+    }
+
+    .sessions h1 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .session-card {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      background-color: #f9f9f9;
+    }
+
+    .session-day {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .session-time {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .extra_info {
+      text-align: center;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with logo and nav -->
+  <div class="page-header">
+    <div class="header-left">
+      <a href="index.html">
+        <img src="logo2_trans.png" alt="MREF Logo" class="logo-img">
+      </a>
+      <nav class="nav-menu">
+        <a href="math_sessions.html">Online Math Sessions</a>
+        <a href="research.html">Our Research</a>
+	<a href="researchers.html">Tutors and Researchers</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Scheduled Sessions -->
+  <div class="sessions">
+    <h1>Scheduled Sessions</h1>
+
+    <div class="session-card">
+      <div class="session-day">Open Session, Secondary level (max. 4 students per class)</div>
+      <div class="session-time">Monday, Tuesday at 8:00 PM – 9:30 PM (Singapore Time)</div>
+      <p> In an Open Session, students have freedom to ask questions and discuss about any secondary math topic. <br> <br>
+	 Pricing: the monthly fee for the Open Session is <u>SGD 100/month, paid at the start of month.</u></p>
+    </div>
+
+    <div class="session-card">
+      <div class="session-day">Math Olympiad Session (for Indonesian students), Secondary level</div>
+      <div class="session-time">Wednesday 8:00 PM – 9:00 PM (Jakarta Time)</div>
+      <p> Pricing: currently non-profit. </p>
+    </div>
+  </div>
+ <p class="extra_info">
+Note that our online sessions are conducted using <span style="color: red">Zoom Meeting</span>. <br> Once enrolled, students can join sessions using a specific Zoom meeting link at the slated time. 
+ </p>
+
+<footer style="
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  color: #555;
+  margin-top: 40px;
+">
+  Contact us: 
+  <a href="https://wa.me/628170474447" target="_blank" style="color: #333; text-decoration: none;">
+    WhatsApp +62 817 047 4447
+  </a> | 
+  <a href="mailto:mref.indonesia@gmail.com" style="color: #333; text-decoration: none;">
+    mref.indonesia@gmail.com
+  </a>
+</footer>
+
+
+</body>
+</html>
