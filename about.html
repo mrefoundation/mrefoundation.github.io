@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Your Name</title>
+  <style>
+    :root{
+      --bg:#f7f7f8;
+      --card:#ffffff;
+      --accent:#0a66c2;
+      --text:#222;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--text);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      padding:24px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.06);
+      padding:28px;
+      max-width:520px;
+      width:100%;
+      text-align:center;
+    }
+    .back {
+      display: inline-block;
+      margin-bottom: 16px;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .back:hover { text-decoration: underline; }
+    h1{font-size:1.4rem;margin:0 0 12px}
+    p{line-height:1.5;color:#444}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <a class="back" href="index.html">← Back to home</a>
+    <h1>About Us</h1>
+    <p>Mathematical Research-Education Foundation is a private research organization focusing in applied mathematics: infectious disease modelling, applications of nonlinear partial differential equations (typically in water wave modelling), and neural network applications (for infectious disease inference and software products).</p>
+    <p>Currently, our non-profit activity includes: 1. Education of Mathematical Olympiad to young Indonesian students (with minimum or no experience in math olympiad) to increase competitiveness and encourage achievements.</p>
+  </main>
+</body>
+</html>
