@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KdV Institute – Demo Clickable</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, serif;
+        background: #f4f4f4;
+        color: #111;
+    }
+
+    /* NAVIGATION BAR */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+/* Logo */
+nav .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav .logo img {
+    height: 40px; /* adjust size as needed */
+    width: auto;
+}
+
+    nav a {
+        margin-right: 20px;
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* TITLE */
+    .title {
+        text-align: center;
+        padding: 40px 0 20px;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "Arial";
+    }
+
+
+    /* SECTION TITLE */
+    .section-title {
+        font-size: 30px;
+        margin-left: 40px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-family: "Arial";
+    }
+
+
+    .description {
+        text-align: left;
+        padding: 40px 0 20px;
+        margin-left: 30px;
+        margin-right: 30px;
+        font-size: 15px;
+    }
+
+    /* CARD GRID */
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 0 40px 60px;
+    }
+
+    .card-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .card {
+        position: relative;
+        height: 250px;
+        border-radius: 8px;
+        overflow: hidden;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px;
+        font-size: 22px;
+        font-weight: bold;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .card:hover {
+        transform: scale(1.02);
+        opacity: 0.9;
+        cursor: pointer;
+    }
+
+    .card small {
+        font-size: 16px;
+        margin-top: 8px;
+        font-weight: normal;
+    }
+
+    /* Background placeholders */
+    .bg1 { background: url('virus_edited.jpg') center/cover; }
+    .bg2 { background: url('bbe_2d.png') center/cover; }
+    .bg3 { background: url('brain2.jpg') center/cover; }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="left">
+        <a href="#">About</a>
+        <a href="#">Math Olympiad Training</a>
+    </div>
+
+    <div class="logo">
+        <a href="#"><img src="logo.png" alt="MREF Logo" width=/></a>
+    </div>
+
+    <div class="right">
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<!-- TITLE -->
+<div class="title">
+    Mathematical Research-Education Foundation
+</div>
+
+<div class="description">
+<p>	Mathematical Research-Education Foundation is a private research organization focusing in applied mathematics: infectious disease modelling, applications of nonlinear partial differential equations (typically in water wave modelling), and neural network applications (for infectious disease inference and software products). </p>
+
+<p>	Currently, our non-profit activity includes: 1. Education of Mathematical Olympiad to young Indonesian students (with minimum or no experience in math olympiad) to increase competitiveness and encourage achievements.   </p>
+</div>
+
+<!-- SECTION -->
+<div class="section-title">Our investigation</div>
+
+<!-- CARDS -->
+<div class="cards">
+
+    <a class="card-link" href="idm.html">
+        <div class="card bg1">
+            Infectious Disease Modelling
+            <small>Mathematical modelling of infectious diseases.</small>
+        </div>
+    </a>
+
+    <a class="card-link" href="pde.html">
+        <div class="card bg2">
+            PDEs and Applications 
+            <small>Mathematical Modelling using Partial Differential Equations.</small>
+        </div>
+    </a>
+
+    <a class="card-link" href="#">
+        <div class="card bg3">
+            Neural Network Applications
+            <small>Neural Network models and their applications.</small>
+        </div>
+    </a>
+
+
+</div>
+
+</body>
+</html>
