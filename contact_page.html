@@ -23,6 +23,14 @@
       min-height:100vh;
       padding:24px;
     }
+
+    .title {
+        text-align: center;
+        padding: 40px 0 20px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Helvetica";
+    }
     .card{
       background:var(--card);
       border-radius:12px;
@@ -73,6 +81,10 @@
 <body>
   <div class="container">
     <a class="back" href="index.html" style="display:inline-block;margin-bottom:16px;text-decoration:none;font-weight:600;color:#0a66c2;">← Back to main page</a>
+    
+  <div class="title">
+   Main researchers:
+  </div>
     <!-- Person 1 -->
     <main class="card" role="main">
       <img class="photo" src="photo_ariefanbiya.png" alt="Photo of Person 1">
@@ -84,10 +96,12 @@
       </div>
     </main>
 
-<!--
+  <div class="title">
+   Research collaborators:
+  </div>
     <main class="card" role="main">
       <img class="photo" src="photo2.jpg" alt="Photo of Person 2">
-      <h1>Person 2 Name</h1>
+      <h1>Benny Yong</h1>
       <p class="description">Short description for person 2.</p>
       <div class="links">
         <a class="btn btn-linkedin" href="https://www.linkedin.com/in/person2" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -98,3 +112,4 @@
   </div>
 </body>
 </html>
+
