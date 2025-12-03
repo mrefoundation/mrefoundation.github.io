@@ -42,6 +42,89 @@
     .back:hover { text-decoration: underline; }
     h1{font-size:1.4rem;margin:0 0 12px}
     p{line-height:1.5;color:#444}
+
+    /* For tablets and small laptops */
+@media (max-width: 992px) {
+    nav {
+        padding: 15px 20px;
+    }
+    .cards {
+        grid-template-columns: repeat(2, 1fr); 
+        padding: 0 20px 40px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 600px) {
+
+    /* NAVIGATION becomes stacked */
+    nav {
+        flex-direction: column;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav .left, 
+    nav .right {
+        display: flex;
+        gap: 15px;
+        margin: 5px 0;
+    }
+
+    nav .logo {
+        position: static;
+        transform: none;
+        margin: 10px 0;
+    }
+
+    nav a {
+        font-size: 16px;
+        margin-right: 0;
+    }
+
+    /* TITLE */
+    .title {
+        padding: 25px 0 10px;
+        font-size: 24px;
+        margin: 0 10px;
+    }
+
+    /* Paragraph description */
+    .description {
+        margin: 0 15px;
+        font-size: 14px;
+    }
+
+    /* Section title spacing */
+    .section-title {
+        font-size: 24px;
+        margin-left: 15px;
+        margin-top: 30px;
+    }
+
+    /* CARDS become 1-column */
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 15px 40px;
+    }
+
+    .card {
+        height: 180px;
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .card small {
+        font-size: 14px;
+    }
+
+    /* Video container full width */
+    .video-container {
+        width: 100%;
+        margin-left: 0;
+    }
+}
   </style>
 </head>
 <body>
@@ -53,4 +136,5 @@
   </main>
 </body>
 </html>
+
 
