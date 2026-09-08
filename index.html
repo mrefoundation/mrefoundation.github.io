@@ -240,11 +240,20 @@
         margin-bottom: 4px;
     }
 
+    /* Investigation section — research list + publication sidebar */
+
+    .investigation-layout {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 56px;
+        align-items: start;
+        padding-bottom: 80px;
+    }
+
     /* Research list — journal table-of-contents style */
 
     .research-list {
         border-top: 1px solid var(--rule);
-        margin-bottom: 80px;
     }
 
     .research-row {
@@ -295,6 +304,99 @@
     .research-row:hover .arrow {
         color: var(--blue);
         transform: translateX(2px);
+    }
+
+    /* Publication sidebar */
+
+    .publication-panel {
+        border: 1px solid var(--rule);
+        padding: 28px;
+        position: sticky;
+        top: 28px;
+    }
+
+    .publication-panel .eyebrow {
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 13px;
+        color: var(--sage);
+        margin: 0 0 20px;
+    }
+
+    .pub-entry {
+        padding: 22px 0;
+        border-top: 1px solid var(--rule);
+    }
+
+    .pub-entry:first-of-type {
+        border-top: none;
+        padding-top: 0;
+    }
+
+    .pub-entry .category {
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 12px;
+        color: var(--sage);
+        margin: 0 0 12px;
+    }
+
+    .pub-thumb {
+        display: block;
+        border: 1px solid var(--rule);
+        overflow: hidden;
+        margin-bottom: 16px;
+        text-decoration: none;
+    }
+
+    .pub-thumb img {
+        width: 100%;
+        height: 110px;
+        object-fit: cover;
+        display: block;
+        transition: opacity 0.15s ease;
+    }
+
+    .pub-thumb:hover img {
+        opacity: 0.85;
+    }
+
+    .pub-entry h4 {
+        font-size: 16.5px;
+        font-weight: 500;
+        line-height: 1.35;
+        margin: 0 0 6px;
+    }
+
+    .pub-entry h4 a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .pub-entry h4 a:hover {
+        color: var(--blue);
+    }
+
+    .pub-meta {
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 12.5px;
+        color: var(--ink-soft);
+        margin: 0 0 14px;
+    }
+
+    .pub-link {
+        display: inline-block;
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--blue);
+        text-decoration: none;
+        border-bottom: 1px solid var(--blue);
+        padding-bottom: 2px;
+        transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .pub-link:hover {
+        color: #244FAD;
+        border-color: #244FAD;
     }
 
     /* ================= FOOTER ================= */
@@ -360,8 +462,14 @@
             padding: 44px 0 22px;
         }
 
-        .research-list {
-            margin-bottom: 44px;
+        .investigation-layout {
+            grid-template-columns: 1fr;
+            gap: 36px;
+            padding-bottom: 44px;
+        }
+
+        .publication-panel {
+            position: static;
         }
 
         .tutoring-panel {
@@ -437,7 +545,7 @@
     <div class="text">
         <p class="kicker">Applied &amp; Theoretical Mathematics</p>
         <h1>Mathematical Tutoring & Research</h1>
-        <p>— We aim to advance mathematical knowledge. We deliver mathematical training to young students. We study problems in disease dynamics, partial differential equations, and neural networks. </p>
+        <p>We aim to advance mathematical knowledge. We deliver mathematical training to young students. We study problems in disease dynamics, partial differential equations, and neural networks. </p>
     </div>
 </header>
 
@@ -457,15 +565,15 @@
         <div class="tutoring-features">
             <div>
                 <strong>One-on-one or small group</strong>
-                Choose from one-on-one personalized tutoring OR small group class with lower price for you and your friends.
+                Choose from one-on-one personalized tutoring OR small group class with lower price for you and your friends. 
             </div>
             <div>
                 <strong>Any level, any goal</strong>
-                From highschool mathematics to university mathematics.
+                From highschool mathematics to university mathematics. 
             </div>
             <div>
                 <strong>Flexible scheduling</strong>
-                Arrange and book sessions with us!
+                Arrange and book sessions with us! 
             </div>
         </div>
     </div>
@@ -475,34 +583,81 @@
         <span>Three active lines of research</span>
     </div>
 
-    <div class="research-list">
+    <div class="investigation-layout">
 
-        <a class="research-row">
-            <span class="index">01</span>
-            <span class="content">
-                <h3>Infectious Disease Modelling</h3>
-                <p>Mathematical modelling of infectious diseases — from compartmental models of transmission to forecasting the course of an outbreak.</p>
-            </span>
-            <span class="arrow">&rarr;</span>
-        </a>
+        <div class="research-list">
 
-        <a class="research-row">
-            <span class="index">02</span>
-            <span class="content">
-                <h3>PDEs and Applications</h3>
-                <p>Mathematical modelling using partial differential equations, applied to problems drawn from the physical and biological sciences.</p>
-            </span>
-            <span class="arrow">&rarr;</span>
-        </a>
+            <a class="research-row" href="idm.html">
+                <span class="index">01</span>
+                <span class="content">
+                    <h3>Infectious Disease Modelling</h3>
+                    <p>Mathematical modelling of infectious diseases — from compartmental models of transmission to forecasting the course of an outbreak.</p>
+                </span>
+                <span class="arrow">&rarr;</span>
+            </a>
 
-        <a class="research-row">
-            <span class="index">03</span>
-            <span class="content">
-                <h3>Deep Learning</h3>
-                <p>Applications of neural networks to modelling problems, and the mathematics underlying how these networks learn.</p>
-            </span>
-            <span class="arrow">&rarr;</span>
-        </a>
+            <a class="research-row" href="pde.html">
+                <span class="index">02</span>
+                <span class="content">
+                    <h3>PDEs and Applications</h3>
+                    <p>Mathematical properties of partial differential equations and its applications.</p>
+                </span>
+                <span class="arrow">&rarr;</span>
+            </a>
+
+            <a class="research-row" href="#">
+                <span class="index">03</span>
+                <span class="content">
+                    <h3>Deep Learning</h3>
+                    <p>Applications of neural networks to modelling problems.</p>
+                </span>
+                <span class="arrow">&rarr;</span>
+            </a>
+
+        </div>
+
+        <!--
+            LATEST PUBLICATIONS
+            One entry per research category, in the same order as the list
+            on the left. For each entry, update the href (used on both the
+            thumbnail and the "Read the paper" link), swap the thumbnail
+            image filename for an actual image placed alongside this HTML
+            file, and edit the title and journal/year line.
+        -->
+        <aside class="publication-panel">
+            <p class="eyebrow">Latest Publications</p>
+
+            <div class="pub-entry">
+                <p class="category">Infectious Disease Modelling</p>
+                <a class="pub-thumb" href="https://pdf.sciencedirectassets.com/318890/1-s2.0-S2588933825X00030/1-s2.0-S2588933825000287/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQCIVW7e3CBKB70dWU6qUYpx1W72hpLjybw5Ajkt5uuMZQIhAOLu1dLaUxOtMUIZdM%2Bu%2Fi0YBQY%2FaV9PDXCmfyeGs%2BNPKrMFCEsQBRoMMDU5MDAzNTQ2ODY1IgwjNk56iZWOL3OOtXoqkAWI4tsDlo6C5ym1CzO7rdYxfmQ6GRA9wCaGptwLpOR28e%2FCmMrXOcVUEtLK1zXJ8iUc1EjXsG1jp6TxfJmZlnPSTW2yMqi66GxWTDIzns%2B%2F%2BIBCGDAwm1%2FzgOXVDOTrbGMiqvCUfDUZ24U9Ul5xtanFuIk4XeZ3VOCbeTX42mfhyUDNPyhKNEYaIYwtQYUi3%2ForsJ7oMGUX%2FrqF6pP97kdbiivkeRieUUoXEnOBUKyAioDlmxoS5rXrBBFTIVv1EmE2UWcNsfdUIOrDDzNBdGvT%2FVyZ6CIIb5iLHqD9cV6227u%2B4TMVyQoL3UHP1BaBBImw8akIP2ZAnHdvuF08aiV92BBxrXDqHWRQbwtfX6Mn8mbiADNDwQS5nv%2Bv9GHSCNV%2BFGCzPClzG0CkWLl6rAYmPReOq72ca3r2GcY9ZG8NI2tcXsqpOZKE4k%2Fr5DuGNTZcLHzm8cf0tIW1ywJRUOGzpcWmBvRAfdz51%2BdXRppgBCn05TPwAbWjGgbkMvLc30oesRRKFQwSYp9kdOamH0n0vdmOxMeZFf0u6NKKYiKh6t7ItX77DgXGtD%2FrROt9bTDpOCNrByILpbX%2BIAnDXyvBnficxp7r157kdkBHUNSrKpF6i%2FKhIQocRWNnxJjd6ckTGxB5SmV%2Bvp8XCHIc8nE8hwiD79LqoT8QbgqnFADrz5EL9WWPVb%2FW7UW3xqVo7Mcl3F060zlcCkku5bFbwSIdkPPDhWYYBEzHU2U%2FB2s%2BcZLSbK67TRRzVQB1Gl78fn2W5fBDgN7Nos9wQL0jWhJUdgZ9dDaDmIaCm7v4CQpJtpaicvsbJZMxcIO0OkgQcKXQTTQsxb5hagjIMzr8OzuSs3kVMOnbnVbt0tyFcM6%2BJTDO0%2F3UBjqwAYic0ElKnRNU2A2295s%2B0mwzm%2FeHsn7eyCE5ydS%2Fio6wCCBQqrrkREJW5oeYhwOvVt5G8MfXSxGmYBU57F0JjhcJQnfwFMy2Ke%2FqTwmT5WwICmuSnOtldpt6tfgdx5k%2Bc%2B%2F140ybT1YjBgeZp6zMaWtAqI9DH3aDOFiVPImTBUcxmE7p8Xj5YEroedJmQ0%2FTIxlQoG4Z04qzbOG3zx0ls5T%2FkTvAmiPIHIC6X%2FWdnrGd&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260908T023931Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY2CARWDE6%2F20260908%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=abfbdd610d393d64b5ae2a7623a3e25667988f23ceea62adf08fe5a8b3fa0219&hash=73b7a954a4de61490f69cc0ccbbb21ca609f330edffa35d03792958543a4b1fe&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S2588933825000287&tid=spdf-6fe01873-07f5-4bba-a9ec-89826be3a6a9&sid=c4a7e51650e3e14ccf5a8c424b96e1fa6d05gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=13020e57500756535b0457&rr=a37a954c386eea7a&cc=id" target="_blank" rel="noopener">
+                    <img src="jbb_thumbnail.png" alt="Thumbnail of our latest infectious disease modelling paper">
+                </a>
+                <h4><a href="https://example.com/idm-paper" target="_blank" rel="noopener">Modeling and simulation of periodic lockdowns on COVID-19 dynamics using an adaptive SIRV model with daily-varying rates</a></h4>
+                <p class="pub-meta">Journal of Biosafety and Biosecurity, 2025</p>
+                <a class="pub-link" href="https://pdf.sciencedirectassets.com/318890/1-s2.0-S2588933825X00030/1-s2.0-S2588933825000287/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQCIVW7e3CBKB70dWU6qUYpx1W72hpLjybw5Ajkt5uuMZQIhAOLu1dLaUxOtMUIZdM%2Bu%2Fi0YBQY%2FaV9PDXCmfyeGs%2BNPKrMFCEsQBRoMMDU5MDAzNTQ2ODY1IgwjNk56iZWOL3OOtXoqkAWI4tsDlo6C5ym1CzO7rdYxfmQ6GRA9wCaGptwLpOR28e%2FCmMrXOcVUEtLK1zXJ8iUc1EjXsG1jp6TxfJmZlnPSTW2yMqi66GxWTDIzns%2B%2F%2BIBCGDAwm1%2FzgOXVDOTrbGMiqvCUfDUZ24U9Ul5xtanFuIk4XeZ3VOCbeTX42mfhyUDNPyhKNEYaIYwtQYUi3%2ForsJ7oMGUX%2FrqF6pP97kdbiivkeRieUUoXEnOBUKyAioDlmxoS5rXrBBFTIVv1EmE2UWcNsfdUIOrDDzNBdGvT%2FVyZ6CIIb5iLHqD9cV6227u%2B4TMVyQoL3UHP1BaBBImw8akIP2ZAnHdvuF08aiV92BBxrXDqHWRQbwtfX6Mn8mbiADNDwQS5nv%2Bv9GHSCNV%2BFGCzPClzG0CkWLl6rAYmPReOq72ca3r2GcY9ZG8NI2tcXsqpOZKE4k%2Fr5DuGNTZcLHzm8cf0tIW1ywJRUOGzpcWmBvRAfdz51%2BdXRppgBCn05TPwAbWjGgbkMvLc30oesRRKFQwSYp9kdOamH0n0vdmOxMeZFf0u6NKKYiKh6t7ItX77DgXGtD%2FrROt9bTDpOCNrByILpbX%2BIAnDXyvBnficxp7r157kdkBHUNSrKpF6i%2FKhIQocRWNnxJjd6ckTGxB5SmV%2Bvp8XCHIc8nE8hwiD79LqoT8QbgqnFADrz5EL9WWPVb%2FW7UW3xqVo7Mcl3F060zlcCkku5bFbwSIdkPPDhWYYBEzHU2U%2FB2s%2BcZLSbK67TRRzVQB1Gl78fn2W5fBDgN7Nos9wQL0jWhJUdgZ9dDaDmIaCm7v4CQpJtpaicvsbJZMxcIO0OkgQcKXQTTQsxb5hagjIMzr8OzuSs3kVMOnbnVbt0tyFcM6%2BJTDO0%2F3UBjqwAYic0ElKnRNU2A2295s%2B0mwzm%2FeHsn7eyCE5ydS%2Fio6wCCBQqrrkREJW5oeYhwOvVt5G8MfXSxGmYBU57F0JjhcJQnfwFMy2Ke%2FqTwmT5WwICmuSnOtldpt6tfgdx5k%2Bc%2B%2F140ybT1YjBgeZp6zMaWtAqI9DH3aDOFiVPImTBUcxmE7p8Xj5YEroedJmQ0%2FTIxlQoG4Z04qzbOG3zx0ls5T%2FkTvAmiPIHIC6X%2FWdnrGd&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260908T023931Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY2CARWDE6%2F20260908%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=abfbdd610d393d64b5ae2a7623a3e25667988f23ceea62adf08fe5a8b3fa0219&hash=73b7a954a4de61490f69cc0ccbbb21ca609f330edffa35d03792958543a4b1fe&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S2588933825000287&tid=spdf-6fe01873-07f5-4bba-a9ec-89826be3a6a9&sid=c4a7e51650e3e14ccf5a8c424b96e1fa6d05gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=13020e57500756535b0457&rr=a37a954c386eea7a&cc=id" target="_blank" rel="noopener">Read the paper &rarr;</a>
+            </div>
+
+            <div class="pub-entry">
+                <p class="category">PDEs and Applications</p>
+                <a class="pub-thumb" href="https://example.com/pde-paper" target="_blank" rel="noopener">
+                    <img src="pde_paper_thumbnail.jpg" alt="Thumbnail of our latest PDE paper">
+                </a>
+                <h4><a href="https://example.com/pde-paper" target="_blank" rel="noopener">Title of the PDE Paper Goes Here</a></h4>
+                <p class="pub-meta">Journal Name, 2026</p>
+                <a class="pub-link" href="https://example.com/pde-paper" target="_blank" rel="noopener">Read the paper &rarr;</a>
+            </div>
+
+            <div class="pub-entry">
+                <p class="category">Deep Learning</p>
+                <a class="pub-thumb" href="https://example.com/dl-paper" target="_blank" rel="noopener">
+                    <img src="dl_paper_thumbnail.jpg" alt="Thumbnail of our latest deep learning paper">
+                </a>
+                <h4><a href="https://example.com/dl-paper" target="_blank" rel="noopener">Title of the Deep Learning Paper Goes Here</a></h4>
+                <p class="pub-meta">Journal Name, 2026</p>
+                <a class="pub-link" href="https://example.com/dl-paper" target="_blank" rel="noopener">Read the paper &rarr;</a>
+            </div>
+
+        </aside>
 
     </div>
 
